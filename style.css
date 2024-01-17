@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url(./assets/spacrecraft-custom-cursor.png), auto;
+}
+
+:root {
+    --col-number: 10
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    padding-block: 3em;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+
+
+}
+
+
+.box {
+    aspect-ratio: 1;
+    width: calc(100% / var(--col-number));
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url(./assets/spacecraf-custom-pointer.png), auto;
+}
+
+.active {
+    background-color: cornflowerblue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2em;
+    padding-block: 3em;
+}
+
+select {
+    font-size: 22px;
+    padding-inline: 2em;
+    padding-block: 0.5em;
+    text-align: center;
+    cursor: url(./assets/spacecraf-custom-pointer.png), auto;
+}
+
+.select label {
+    font-size: 18px;
+}
+
+button {
+    padding-inline: 2em;
+    padding-block: 0.5em;
+    font-size: 22px;
+    cursor: url(./assets/spacecraf-custom-pointer.png), auto;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+img {
+    pointer-events: none;
+}
+
+.box span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box span.d-none {
+    display: none;
+}
